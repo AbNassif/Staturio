@@ -65,12 +65,10 @@ TABLE OF CONTENTS:
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 html,
 body {
-  width: 100%;
-  height: 100%;
+  overflow-x: hidden;
   background-color: var(--mainDark);
   font-family: "roboto", sans-serif;
 }
@@ -716,9 +714,10 @@ section.introduction {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 50vh;
+  height: 50vh;
+  max-height: 500px;
   padding: 3rem 0;
-  max-height: 700px;
+
   background-color: #141414;
   box-shadow: 0px -10rem 0px #141414, 0px 10rem 0px #141414;
 }
@@ -759,6 +758,10 @@ section.introduction {
 }
 
 @media only screen and (max-width: 880px) {
+  #count {
+    height: fit-content;
+    max-height: unset;
+  }
   .boxWrapper {
     flex-direction: column;
     width: 100%;
@@ -1107,7 +1110,7 @@ footer {
 
 footer ul {
   width: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   display: grid;
   grid-template-columns: 1fr 0.75fr 0.75fr 1fr;
   align-items: flex-start;

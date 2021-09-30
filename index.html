@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STATURIO</title>
 
-    <link rel="icon" type="image/png" href="/images/browserIcon.png" />
+    <!-- <link rel="icon" href="/images/browserIcon.png" /> -->
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -689,9 +689,15 @@
         </p>
       </div>
     </footer>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("load", () => {
+          AOS.refresh();
+        });
+      });
     </script>
 
     <script src="scripts/home.js"></script>
