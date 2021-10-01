@@ -1158,6 +1158,10 @@ li.newsletter h2 {
 .newsletter form input {
   margin: 1rem 0;
   font-family: "oswald";
+  width: 100%;
+  max-width: 350px;
+  height: 50px;
+  padding: 5px;
 }
 
 .newsletter button {
