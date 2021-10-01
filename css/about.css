@@ -536,6 +536,7 @@ div.button {
   background-color: var(--mainDark);
   max-width: 1440px;
   padding: 4rem 0;
+  margin: auto;
 }
 
 button.portfolio {
