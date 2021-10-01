@@ -537,6 +537,7 @@ div.button {
   max-width: 1440px;
   padding: 4rem 0;
   margin: auto;
+  margin-top: 4rem;
 }
 
 button.portfolio {
