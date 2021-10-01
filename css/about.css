@@ -138,12 +138,12 @@ main {
   z-index: 1;
   position: relative;
   background-color: var(--mainDark);
+  padding: 0.5rem 2rem;
 }
 
 main nav {
-  margin: 0.5rem 2rem;
-
   height: 3rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
