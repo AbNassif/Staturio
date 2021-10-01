@@ -794,7 +794,8 @@ section.introduction {
   background-color: var(--mainGrey);
   width: 90vw;
   max-width: 90%;
-
+  position: relative;
+  z-index: 0;
   margin: auto;
   padding: 2.5rem 5rem;
 }
@@ -948,6 +949,7 @@ section.order {
   border-radius: 5px;
   z-index: 2;
   position: relative;
+  z-index: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
