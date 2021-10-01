@@ -28,11 +28,11 @@
     />
 
     <!-- CSS TAGS -->
-    <link rel="stylesheet" type="text/css" href="css/about.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
   </head>
   <body>
-    <a class="goTop" href="#about"> <i class="fas fa-angle-up"></i></a>
-    <main id="about">
+    <a class="goTop" href="#home"> <i class="fas fa-angle-up"></i></a>
+    <main id="home">
       <nav>
         <div class="logo">
           <h1><span class="sInLogo">S</span>CULPTURIO</h1>
@@ -44,10 +44,10 @@
             <a class="navLink" href="./index.html">HOME</a>
           </li>
           <li class="navItem">
-            <a class="navLink active" href="./about.html">ABOUT</a>
+            <a class="navLink" href="./about.html">ABOUT</a>
           </li>
           <li class="navItem">
-            <a class="navLink" href="./contact.html">CONTACT</a>
+            <a class="navLink active" href="./contact.html">CONTACT</a>
           </li>
           <li class="navItem order">
             <a class="navLink" href="#">ORDER NOW</a>
@@ -69,67 +69,43 @@
           <button>ORDER NOW</button>
         </div>
       </nav>
-      <div class="about">
-        <div class="stepOne">
-          <div class="text" data-aos="fade-right">
-            <h1 class="waterMark stepCount">1</h1>
-
-            <h1>AESTHETIC IPSUM</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
-              <br /><br />
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-          </div>
-          <div class="img">
-            <img src="./images/about/storyOfASculpturer.jpg" alt="Sculpting" />
-          </div>
-        </div>
-        <div class="stepTwo">
-          <div class="text" data-aos="fade-left" data-aos-once="true">
-            <h1 class="waterMark stepCount">2</h1>
-
-            <h1>AESTHETIC IPSUM</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
-              <br /><br />
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-          </div>
-          <div class="img">
-            <img src="./images/about/sculpting.jpg" alt="Sculpting" />
-          </div>
-        </div>
-      </div>
     </main>
 
-    <div class="button">
-      <button
-        class="portfolio"
-        onclick="alert(`This is a dummy website created by Abdullah Bou Nassif`)"
-      >
-        PORTFOLIO
-      </button>
-    </div>
+    <!-- CONTACT FORM -->
+    <section class="contact">
+      <h1>Let's get in touch!</h1>
+      <form>
+        <div class="row">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
+          <input type="text" name="lastName" placeholder="Last Name" required />
+        </div>
+        <div class="row">
+          <input
+            class="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
 
+        <div class="row">
+          <textarea
+            placeholder="Tell us a little more about the sculpture and what it will represent."
+            name="moreInfo"
+          ></textarea>
+        </div>
+        <div class="row fileUpload">
+          <button id="orderSubmit" type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="empty"></div>
+    </section>
     <!-- FOOTER -->
 
     <footer>
@@ -146,9 +122,9 @@
         </li>
         <li class="links">
           <h2>Links</h2>
-          <a href="./index.html">HOME</a>
-          <a href="./about.html">ABOUT</a>
-          <a href="./contact.html">CONTACT</a>
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">CONTACT</a>
           <a href="#">PORTFOLIO</a>
         </li>
         <li class="achievements">

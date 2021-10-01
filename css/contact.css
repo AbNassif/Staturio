@@ -3,9 +3,7 @@ TABLE OF CONTENTS:
 1- Defaults
 2- MAIN SECTION
     2.1- MAIN SECTION - NAV
-    2.2- ABOUT STEPS
-3- BUTTON
-4- FOOTER
+3- FOOTER
 
 ****************************************************************/
 
@@ -60,11 +58,13 @@ html {
 html,
 body {
   overflow-x: hidden;
-  background-color: var(--mainGrey);
-
+  background-color: var(--mainDark);
   font-family: "roboto", sans-serif;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+}
 li {
   list-style: none;
 }
@@ -134,10 +134,11 @@ main {
   padding: 0.1px 0 0 0;
   width: 100%;
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
   z-index: 1;
   position: relative;
   background-color: var(--mainDark);
+  z-index: 5;
 }
 
 main nav {
@@ -147,8 +148,7 @@ main nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 5;
-  margin-bottom: 2rem;
+  z-index: 10;
 }
 
 li.socialMedia,
@@ -321,230 +321,142 @@ li.navItem {
     padding: 1rem 0;
   }
 }
+/***************************************************************
+                        CONTACT FORM
+****************************************************************/
 
-/* MAIN - ABOUT */
-
-.about {
+section.contact {
   width: 100%;
-  margin-bottom: 2rem;
+  max-width: 1440px;
+
+  background-color: var(--mainDark);
+  margin: 0 auto;
 }
 
-.waterMark.stepCount {
-  font-size: calc(var(--bigHeader) * 1.5) !important;
-  padding: 0 1rem;
-  margin: 0;
+section.contact h1 {
+  text-align: center;
+  font-size: var(--bigHeader);
+  color: #fff;
+  transform: translateY(100%);
 }
 
-.about div {
-  width: 100%;
-  display: flex;
-}
-
-.about div.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  padding: 0 1rem 1rem;
-  color: white;
-}
-
-div.text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-div.img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1.1;
-  padding: 1rem;
+section.contact form {
+  width: 70%;
+  background-color: #c4c4c4;
+  margin: auto;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  z-index: 2;
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+  transform: translateY(25%);
 }
 
-.about div div.img img {
-  padding: 1rem;
+form div.hr {
+  background-color: #adadad;
   width: 100%;
-  height: fit-content;
+  margin: auto;
+  height: 1px;
 }
 
-/* Step One */
-.about .stepOne .waterMark {
-  color: var(--mainGrey);
+.order form h1 {
+  font-size: var(--secondHeader);
+  color: black;
+  margin: 1rem 0;
 }
 
-.stepOne div.img::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
+form input,
+form select {
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to right,
-    transparent 20%,
-    var(--mainGrey) 0%
-  );
-  background-position: top right;
-  background-size: 9rem 0.8rem;
-  background-repeat: repeat-x;
-  background-position-x: left;
+  height: 3rem;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 1.1rem;
+  padding: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  appearance: none;
 }
 
-.stepOne div.img::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
+form .row {
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 20%,
-    var(--mainGrey) 0%
-  );
-  background-position: left bottom;
-  background-size: 0.8rem 9rem;
-  background-repeat: repeat-y;
-  background-position-y: top;
+  display: flex;
+  padding: 0 2rem;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+form textarea {
+  outline: none;
+  border: none;
+  resize: none;
+  width: 100%;
+  height: 10rem;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-/* Step TWO */
+.row.fileUpload {
+  flex-direction: column;
+  align-items: center;
+}
+.row.fileUpload input,
+.row.fileUpload button {
+  width: 100%;
+  max-width: 250px;
+  height: 3rem;
+  font-size: 1.1rem;
+}
 
-.stepTwo {
+.row.fileUpload input {
+  size: 60;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.empty {
+  width: 100%;
+  max-width: 1440px;
+  height: 30vh;
+  max-height: 200px;
   background-color: var(--mainGrey);
 }
 
-.about .stepTwo .waterMark {
-  color: var(--mainDark);
-  text-align: end;
-}
-
-.stepTwo div.text {
-  order: 2;
-}
-.stepTwo div.img {
-  order: 1;
-}
-
-.stepTwo div.img::before {
-  content: "";
-
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to left,
-    transparent 20%,
-    var(--mainDark) 0%
-  );
-  background-position: bottom;
-  background-size: 9rem 0.8rem;
-  background-repeat: repeat-x;
-  background-position-x: right;
-}
-
-.stepTwo div.img::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 20%,
-    var(--mainDark) 0%
-  );
-  background-position: right top;
-  background-size: 0.8rem 9rem;
-  background-repeat: repeat-y;
-  background-position-y: bottom;
-}
-
-@media only screen and (max-width: 900px) {
-  div.img {
-    padding: 0.5rem;
+@media only screen and (max-width: 850px) {
+  section.contact form {
+    padding: 1rem 2rem;
+  }
+  section.contact form {
+    width: 90%;
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .stepOne div.img::after,
-  .stepOne div.img::before,
-  .stepTwo div.img::after,
-  .stepTwo div.img::before {
-    display: none;
-  }
-
-  div.text {
-    max-width: 50%;
-  }
-  div.img {
-    background-color: rgb(60, 60, 60);
-    flex: 1;
-    width: 50%;
+@media only screen and (max-width: 675px) {
+  form .row {
     padding: 0;
   }
-
-  div.img img {
-    padding: 0 !important;
-  }
-  div div.text {
-    text-align: center;
-  }
-  .waterMark {
-    text-align: center !important;
-  }
 }
 
-@media only screen and (max-width: 650px) {
-  .about div {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .about div.img,
-  div.about div.text {
-    max-width: unset;
+@media only screen and (max-width: 550px) {
+  section.contact form {
     width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    transform: translate(0);
   }
-
-  .stepOne div.img {
-    order: 1;
+  section.contact h1 {
+    transform: translateY(0);
+    margin-bottom: 1rem;
   }
-
-  .stepOne .text {
-    order: 2;
-  }
-
-  div.stepTwo div.img {
-    background-color: var(--mainDark);
+  form .row {
+    flex-direction: column;
   }
 }
-
-/***************************************************************
-                            BUTTON
-****************************************************************/
-
-div.button {
-  background-color: var(--mainDark);
-  max-width: 1440px;
-  padding: 4rem 0;
-}
-
-button.portfolio {
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  height: 45px;
-  font-size: 1rem;
-  background-color: #e8e8e8;
-  border-radius: 3px;
+@media only screen and (max-width: 375px) {
+  .empty {
+    display: none;
+  }
 }
 
 /***************************************************************
